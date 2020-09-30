@@ -1,4 +1,4 @@
-# [DEPRECATED] Official Klarna REST PHP SDK
+# [DEPRECATED] Official Klarna REST PHP SDK (EDIT: WITH GUZZLE 7)
 [![Packagist Version][packagist-image]](https://packagist.org/packages/klarna/kco_rest)
 [![Build Status][travis-image]](https://travis-ci.org/klarna/kco_rest_php)
 [![Coverage Status][coveralls-image]](https://coveralls.io/r/klarna/kco_rest_php?branch=v4.x)
