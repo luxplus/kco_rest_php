@@ -50,7 +50,7 @@ class Tokens extends Resource
      * Constructs a Tokens instance.
      *
      * @param ConnectorInterface $connector HTTP transport connector
-     * @param string    $customerToken   Customer Token
+     * @param ?string    $customerToken   Customer Token
      */
     public function __construct(ConnectorInterface $connector, $customerToken)
     {
@@ -74,7 +74,7 @@ class Tokens extends Resource
      *
      * @return array created order data
      */
-    public function createOrder(array $data, $klarnaIdempotencyKey = null)
+    public function createOrder(array $data, ?string $klarnaIdempotencyKey = null)
     {
         $headers = ['Content-Type' => 'application/json'];
         if (!is_null($klarnaIdempotencyKey)) {

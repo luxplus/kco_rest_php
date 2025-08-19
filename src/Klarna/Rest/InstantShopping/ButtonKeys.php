@@ -43,10 +43,9 @@ class ButtonKeys extends Resource
      * Constructs a ButtonKey instance.
      *
      * @param ConnectorInterface $connector HTTP transport connector
-     * @param string    $buttonKey Button identifier
-     * @param string    $key Button key based on setup options
+     * @param ?string    $buttonKey Button identifier
      */
-    public function __construct(ConnectorInterface $connector, $buttonKey = null)
+    public function __construct(ConnectorInterface $connector, ?string $buttonKey = null)
     {
         parent::__construct($connector);
 

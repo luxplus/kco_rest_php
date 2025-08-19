@@ -84,7 +84,7 @@ interface ConnectorInterface
      *
      * @throws RuntimeException if HTTP transport failed to execute a call
      */
-    public function post($path, $data = null, $headers = []);
+    public function post(string $path, ?string $data = null, $headers = []);
 
     /**
      * Sends HTTP PUT request to specified path.
@@ -96,7 +96,7 @@ interface ConnectorInterface
      *
      * @throws RuntimeException if HTTP transport failed to execute a call
      */
-    public function put($path, $data = null, $headers = []);
+    public function put(string $path, ?string $data = null, $headers = []);
 
     /**
      * Sends HTTP PATCH request to specified path.
@@ -108,7 +108,7 @@ interface ConnectorInterface
      *
      * @throws RuntimeException if HTTP transport failed to execute a call
      */
-    public function patch($path, $data = null, $headers = []);
+    public function patch(string $path, ?string $data = null, $headers = []);
 
     /**
      * Sends HTTP DELETE request to specified path.
@@ -120,5 +120,5 @@ interface ConnectorInterface
      *
      * @throws RuntimeException if HTTP transport failed to execute a call
      */
-    public function delete($path, $data = null, $headers = []);
+    public function delete(string $path, ?string $data = null, $headers = []);
 }

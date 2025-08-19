@@ -47,9 +47,9 @@ class Sessions extends Resource
      * Constructs a session instance.
      *
      * @param ConnectorInterface $connector HTTP transport connector
-     * @param string    $sessionId   Session ID
+     * @param ?string    $sessionId   Session ID
      */
-    public function __construct(ConnectorInterface $connector, $sessionId = null)
+    public function __construct(ConnectorInterface $connector, ?string $sessionId = null)
     {
         parent::__construct($connector);
 

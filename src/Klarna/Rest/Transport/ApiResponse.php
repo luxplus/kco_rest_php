@@ -27,20 +27,20 @@ class ApiResponse
     /**
      * HTTP response Status code
      */
-    private $status;
+    private ?int $status;
 
     /**
      * HTTP Response headers
      */
-    private $headers = [];
+    private array $headers = [];
 
     /**
      * HTTP body binary payout
      */
-    private $body = null;
+    private ?string $body = null;
 
 
-    public function __construct($status = null, $body = null, $headers = [])
+    public function __construct(?int $status = null, ?string $body = null, array $headers = [])
     {
         $this->setStatus($status);
         $this->setBody($body);

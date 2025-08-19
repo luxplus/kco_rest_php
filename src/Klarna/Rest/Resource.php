@@ -162,7 +162,7 @@ abstract class Resource extends \ArrayObject
      * @param string $method HTTP method, e.g. 'GET'
      * @param string $url Request destination
      * @param array $headers
-     * @param string $body
+     * @param ?string $body
      *
      * @throws ConnectorException When the API replies with an error response
      * @throws RequestException   When an error is encountered
@@ -170,7 +170,7 @@ abstract class Resource extends \ArrayObject
      * @return ResponseValidator When the API replies with an error response
      *
      */
-    protected function request($method, $url, array $headers = [], $body = null)
+    protected function request($method, $url, array $headers = [], ?string $body = null)
     {
         $debug = getenv('DEBUG_SDK') || defined('DEBUG_SDK');
 
@@ -246,7 +246,7 @@ DEBUG_BODY;
      * Sends a HTTP DELETE request to the specified url.
      *
      * @param string $url  Request destination
-     * @param array  $data Data to be JSON encoded
+     * @param ?array  $data Data to be JSON encoded
      *
      * @throws ConnectorException When the API replies with an error response
      * @throws RequestException   When an error is encountered
@@ -254,7 +254,7 @@ DEBUG_BODY;
      *
      * @return ResponseValidator
      */
-    protected function delete($url, array $data = null)
+    protected function delete($url, ?array $data = null)
     {
         return $this->request(
             'DELETE',
@@ -268,7 +268,7 @@ DEBUG_BODY;
      * Sends a HTTP PATCH request to the specified url.
      *
      * @param string $url  Request destination
-     * @param array  $data Data to be JSON encoded
+     * @param ?array  $data Data to be JSON encoded
      *
      * @throws ConnectorException When the API replies with an error response
      * @throws RequestException   When an error is encountered
@@ -312,7 +312,7 @@ DEBUG_BODY;
      * Sends a HTTP POST request to the specified url.
      *
      * @param string $url  Request destination
-     * @param array  $data Data to be JSON encoded
+     * @param ?array  $data Data to be JSON encoded
      *
      * @throws ConnectorException When the API replies with an error response
      * @throws RequestException   When an error is encountered
@@ -320,7 +320,7 @@ DEBUG_BODY;
      *
      * @return ResponseValidator
      */
-    protected function post($url, array $data = null)
+    protected function post(string $url, ?array $data = null)
     {
         return $this->request(
             'POST',

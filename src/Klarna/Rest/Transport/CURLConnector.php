@@ -67,7 +67,7 @@ class CURLConnector implements ConnectorInterface
         $merchantId,
         $sharedSecret,
         $baseUrl,
-        UserAgentInterface $userAgent = null
+        ?UserAgentInterface $userAgent = null
     ) {
         $this->merchantId = $merchantId;
         $this->sharedSecret = $sharedSecret;
@@ -110,12 +110,12 @@ class CURLConnector implements ConnectorInterface
      * Sends HTTP POST request to specified path.
      *
      * @param string $path URL path.
-     * @param string $data Data to be sent to API server in a payload. Example: json-encoded string
+     * @param ?string $data Data to be sent to API server in a payload. Example: json-encoded string
      * @param array $headers HTTP request headers
      * @return ApiResponse Processed response
      * @throws RuntimeException if HTTP transport failed to execute a call
      */
-    public function post($path, $data = null, $headers = [])
+    public function post(string $path, ?string $data = null, $headers = [])
     {
         return $this->request(Method::POST, $path, $headers, $data);
     }
@@ -124,13 +124,13 @@ class CURLConnector implements ConnectorInterface
      * Sends HTTP PUT request to specified path.
      *
      * @param string $path URL path.
-     * @param string $data Data to be sent to API server in a payload. Example: json-encoded string
+     * @param ?string $data Data to be sent to API server in a payload. Example: json-encoded string
      * @param array $headers HTTP request headers
      * @return ApiResponse Processed response
      *
      * @throws RuntimeException if HTTP transport failed to execute a call
      */
-    public function put($path, $data = null, $headers = [])
+    public function put(string $path, ?string $data = null, $headers = [])
     {
         return $this->request(Method::PUT, $path, $headers, $data);
     }
@@ -139,13 +139,13 @@ class CURLConnector implements ConnectorInterface
      * Sends HTTP PATCH request to specified path.
      *
      * @param string $path URL path.
-     * @param string $data Data to be sent to API server in a payload. Example: json-encoded string
+     * @param ?string $data Data to be sent to API server in a payload. Example: json-encoded string
      * @param array $headers HTTP request headers
      * @return ApiResponse Processed response
      *
      * @throws RuntimeException if HTTP transport failed to execute a call
      */
-    public function patch($path, $data = null, $headers = [])
+    public function patch(string $path, ?string $data = null, $headers = [])
     {
         return $this->request(Method::PATCH, $path, $headers, $data);
     }
@@ -154,13 +154,13 @@ class CURLConnector implements ConnectorInterface
      * Sends HTTP DELETE request to specified path.
      *
      * @param string $path URL path.
-     * @param string $data Data to be sent to API server in a payload. Example: json-encoded string
+     * @param ?string $data Data to be sent to API server in a payload. Example: json-encoded string
      * @param array $headers HTTP request headers
      * @return ApiResponse Processed response
      *
      * @throws RuntimeException if HTTP transport failed to execute a call
      */
-    public function delete($path, $data = null, $headers = [])
+    public function delete(string $path, ?string $data = null, $headers = [])
     {
         return $this->request(Method::DELETE, $path, $headers, $data);
     }
@@ -169,13 +169,13 @@ class CURLConnector implements ConnectorInterface
      * Performs HTTP(S) request.
      *
      * @param string $path URL path.
-     * @param string $data Data to be sent to API server in a payload. Example: json-encoded string
+     * @param ?string $data Data to be sent to API server in a payload. Example: json-encoded string
      * @param array $headers HTTP request headers
      * @return ApiResponse Processed response
      *
      * @throws RuntimeException if HTTP transport failed to execute a call
      */
-    protected function request($method, $url, array $headers = [], $data = null)
+    protected function request($method, $url, array $headers = [], ?string $data = null)
     {
         $headers = array_merge([
            'User-Agent' => (string) $this->userAgent,
@@ -269,7 +269,7 @@ class CURLConnector implements ConnectorInterface
         $merchantId,
         $sharedSecret,
         $baseUrl = self::EU_BASE_URL,
-        UserAgentInterface $userAgent = null
+        ?UserAgentInterface $userAgent = null
     ) {
         return new static($merchantId, $sharedSecret, $baseUrl, $userAgent);
     }

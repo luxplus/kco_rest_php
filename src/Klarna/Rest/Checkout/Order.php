@@ -49,9 +49,9 @@ class Order extends Resource
      * Constructs an order instance.
      *
      * @param ConnectorInterface $connector HTTP transport connector
-     * @param string    $orderId   Order ID
+     * @param ?string    $orderId   Order ID
      */
-    public function __construct(ConnectorInterface $connector, $orderId = null)
+    public function __construct(ConnectorInterface $connector, ?string $orderId = null)
     {
         parent::__construct($connector);
 
