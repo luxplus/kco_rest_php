@@ -170,7 +170,7 @@ abstract class Resource extends \ArrayObject
      * @return ResponseValidator When the API replies with an error response
      *
      */
-    protected function request($method, $url, array $headers = [], $body = null)
+    protected function request($method, $url, array $headers = [], ?string $body = null)
     {
         $debug = getenv('DEBUG_SDK') || defined('DEBUG_SDK');
 
@@ -254,7 +254,7 @@ DEBUG_BODY;
      *
      * @return ResponseValidator
      */
-    protected function delete($url, array $data = null)
+    protected function delete($url, ?array $data = null)
     {
         return $this->request(
             'DELETE',
@@ -320,7 +320,7 @@ DEBUG_BODY;
      *
      * @return ResponseValidator
      */
-    protected function post($url, array $data = null)
+    protected function post(string $url, ?array $data = null)
     {
         return $this->request(
             'POST',

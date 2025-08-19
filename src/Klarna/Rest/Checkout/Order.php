@@ -51,7 +51,7 @@ class Order extends Resource
      * @param ConnectorInterface $connector HTTP transport connector
      * @param string    $orderId   Order ID
      */
-    public function __construct(ConnectorInterface $connector, $orderId = null)
+    public function __construct(ConnectorInterface $connector, ?string $orderId = null)
     {
         parent::__construct($connector);
 

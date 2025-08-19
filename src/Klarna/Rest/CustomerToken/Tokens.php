@@ -74,7 +74,7 @@ class Tokens extends Resource
      *
      * @return array created order data
      */
-    public function createOrder(array $data, $klarnaIdempotencyKey = null)
+    public function createOrder(array $data, ?string $klarnaIdempotencyKey = null)
     {
         $headers = ['Content-Type' => 'application/json'];
         if (!is_null($klarnaIdempotencyKey)) {

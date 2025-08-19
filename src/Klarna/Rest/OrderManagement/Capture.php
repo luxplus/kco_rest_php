@@ -51,7 +51,7 @@ class Capture extends Resource
      * @param string    $orderUrl  Parent order resource url
      * @param string    $captureId Capture ID
      */
-    public function __construct(ConnectorInterface $connector, $orderUrl, $captureId = null)
+    public function __construct(ConnectorInterface $connector, string $orderUrl, ?string $captureId = null)
     {
         parent::__construct($connector);
 
