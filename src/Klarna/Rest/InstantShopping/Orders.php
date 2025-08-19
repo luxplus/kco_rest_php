@@ -81,7 +81,7 @@ class Orders extends Resource
      * @see https://developers.klarna.com/api/#instant-shopping-api-declines-an-authorized-order-identified-by-the-authorization-token
      * @codingStandardsIgnoreEnd
      *
-     * @param array $data Decline data
+     * @param ?array $data Decline data
      *
      * @throws ConnectorException When the API replies with an error response
      * @throws RequestException   When an error is encountered

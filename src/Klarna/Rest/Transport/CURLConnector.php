@@ -110,7 +110,7 @@ class CURLConnector implements ConnectorInterface
      * Sends HTTP POST request to specified path.
      *
      * @param string $path URL path.
-     * @param string $data Data to be sent to API server in a payload. Example: json-encoded string
+     * @param ?string $data Data to be sent to API server in a payload. Example: json-encoded string
      * @param array $headers HTTP request headers
      * @return ApiResponse Processed response
      * @throws RuntimeException if HTTP transport failed to execute a call
@@ -124,7 +124,7 @@ class CURLConnector implements ConnectorInterface
      * Sends HTTP PUT request to specified path.
      *
      * @param string $path URL path.
-     * @param string $data Data to be sent to API server in a payload. Example: json-encoded string
+     * @param ?string $data Data to be sent to API server in a payload. Example: json-encoded string
      * @param array $headers HTTP request headers
      * @return ApiResponse Processed response
      *
@@ -139,7 +139,7 @@ class CURLConnector implements ConnectorInterface
      * Sends HTTP PATCH request to specified path.
      *
      * @param string $path URL path.
-     * @param string $data Data to be sent to API server in a payload. Example: json-encoded string
+     * @param ?string $data Data to be sent to API server in a payload. Example: json-encoded string
      * @param array $headers HTTP request headers
      * @return ApiResponse Processed response
      *
@@ -154,7 +154,7 @@ class CURLConnector implements ConnectorInterface
      * Sends HTTP DELETE request to specified path.
      *
      * @param string $path URL path.
-     * @param string $data Data to be sent to API server in a payload. Example: json-encoded string
+     * @param ?string $data Data to be sent to API server in a payload. Example: json-encoded string
      * @param array $headers HTTP request headers
      * @return ApiResponse Processed response
      *
@@ -169,7 +169,7 @@ class CURLConnector implements ConnectorInterface
      * Performs HTTP(S) request.
      *
      * @param string $path URL path.
-     * @param string $data Data to be sent to API server in a payload. Example: json-encoded string
+     * @param ?string $data Data to be sent to API server in a payload. Example: json-encoded string
      * @param array $headers HTTP request headers
      * @return ApiResponse Processed response
      *

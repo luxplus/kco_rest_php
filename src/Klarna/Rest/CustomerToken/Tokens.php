@@ -50,7 +50,7 @@ class Tokens extends Resource
      * Constructs a Tokens instance.
      *
      * @param ConnectorInterface $connector HTTP transport connector
-     * @param string    $customerToken   Customer Token
+     * @param ?string    $customerToken   Customer Token
      */
     public function __construct(ConnectorInterface $connector, $customerToken)
     {

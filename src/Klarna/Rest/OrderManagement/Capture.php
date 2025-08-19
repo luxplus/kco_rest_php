@@ -49,7 +49,7 @@ class Capture extends Resource
      *
      * @param ConnectorInterface $connector HTTP transport connector
      * @param string    $orderUrl  Parent order resource url
-     * @param string    $captureId Capture ID
+     * @param ?string    $captureId Capture ID
      */
     public function __construct(ConnectorInterface $connector, string $orderUrl, ?string $captureId = null)
     {
