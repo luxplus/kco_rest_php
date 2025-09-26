@@ -254,7 +254,7 @@ DEBUG_BODY;
      *
      * @return ResponseValidator
      */
-    protected function delete($url, array $data = null)
+    protected function delete($url, ?array $data = null)
     {
         return $this->request(
             'DELETE',
@@ -320,7 +320,7 @@ DEBUG_BODY;
      *
      * @return ResponseValidator
      */
-    protected function post($url, array $data = null)
+    protected function post($url, ?array $data = null)
     {
         return $this->request(
             'POST',
