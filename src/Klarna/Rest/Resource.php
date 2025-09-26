@@ -103,7 +103,7 @@ abstract class Resource extends \ArrayObject
     /**
      * Overrides: Stores the ID KEY field in order to restore it after exchanging the array without
      * the ID field.
-     * 
+     *
      * @param array $array Data to be exchanged
      */
     #[\ReturnTypeWillChange]
@@ -223,7 +223,7 @@ DEBUG_BODY;
         if (!empty($location)) {
             $this->setLocation($location);
         }
-        
+
         return new ResponseValidator($response);
     }
 
@@ -322,6 +322,7 @@ DEBUG_BODY;
      * @return ResponseValidator
      */
     protected function post(string $url, ?array $data = null)
+
     {
         return $this->request(
             'POST',
