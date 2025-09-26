@@ -91,7 +91,7 @@ class Orders extends Resource
      *
      * @return self
      */
-    public function decline(array $data = null)
+    public function decline(?array $data = null)
     {
         $this->delete($this->getLocation(), $data)
             ->expectSuccessfull()

@@ -67,7 +67,7 @@ class CURLConnector implements ConnectorInterface
         $merchantId,
         $sharedSecret,
         $baseUrl,
-        UserAgentInterface $userAgent = null
+        ?UserAgentInterface $userAgent = null
     ) {
         $this->merchantId = $merchantId;
         $this->sharedSecret = $sharedSecret;
@@ -269,7 +269,7 @@ class CURLConnector implements ConnectorInterface
         $merchantId,
         $sharedSecret,
         $baseUrl = self::EU_BASE_URL,
-        UserAgentInterface $userAgent = null
+        ?UserAgentInterface $userAgent = null
     ) {
         return new static($merchantId, $sharedSecret, $baseUrl, $userAgent);
     }
